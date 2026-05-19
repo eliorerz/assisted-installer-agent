@@ -168,7 +168,7 @@ var _ = Describe("Domain resolution", func() {
 
 func getTestIpv4(index int) net.IP {
 	// TEST-NET-1
-	return []byte{192, 0, 2, byte(index)}
+	return []byte{192, 0, 2, byte(index)} //nolint: gosec
 }
 
 func getTestIpv6(index int) net.IP {
@@ -177,7 +177,7 @@ func getTestIpv6(index int) net.IP {
 		32, 1, 13, 184,
 		0, 0, 0, 0,
 		0, 0, 0, 0,
-		0, 0, 0, byte(index),
+		0, 0, 0, byte(index), //nolint: gosec
 	}
 }
 
